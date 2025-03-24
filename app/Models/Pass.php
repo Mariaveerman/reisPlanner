@@ -12,8 +12,8 @@ class Pass extends Model
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $table = "Pass";
-    public $timestraps = true;
+    protected $table = "passes";
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.

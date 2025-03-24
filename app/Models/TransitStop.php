@@ -12,8 +12,8 @@ class TransitStop extends Model
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $table = "TransitStop";
-    public $timestraps = true;
+    protected $table = "transit_stops";
+    public $timestamps = true;
     /**
      * The attributes that are mass assignable.
      *

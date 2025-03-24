@@ -17,12 +17,15 @@ return new class extends Migration
             $table->string('destination');
             $table->time('departure_time', precision: 0);
             $table->time('arrival_time', precision: 0);
+            // TODO:: menschien tog iets met een datum die elke week/dag versprinkt
             $table->set('weekdays', ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']);
             $table->softDeletes('delete_time', precision: 0);
-            $table->foreignId('transport_id')->nulable()->constrained('transports');
+            $table->enum('means_of_transport', ['train', 'bus', 'metro', 'tram', 'ferryboat']);
+            $table->float('places');
             $table->foreignId('edit_by')->nulable()->constrained('users');
             $table->foreignId('creat_by')->nulable()->constrained('users');
             $table->timestamps();
+            //TODO:: paron toevoegen
         });
     }
 

@@ -12,8 +12,8 @@ class Rice extends Model
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $table = "Rice";
-    public $timestraps = true;
+    protected $table = "rices";
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.

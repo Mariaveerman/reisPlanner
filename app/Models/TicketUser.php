@@ -12,8 +12,8 @@ class TicketUser extends Model
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $table = "TicketUser";
-    public $timestraps = true;
+    protected $table = "tickets_users";
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
